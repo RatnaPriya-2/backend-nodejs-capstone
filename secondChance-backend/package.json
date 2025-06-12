@@ -1,12 +1,12 @@
 {
   "name": "giftlink-backend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
@@ -28,9 +28,13 @@
     "@testing-library/jest-dom": "^6.3.0",
     "@testing-library/react": "^14.1.2",
     "chai": "^4.3.10",
+    "eslint": "^9.28.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.2.0",
     "mocha": "^10.2.0",
     "nodemon": "^3.0.2",
     "sinon": "^17.0.1",
     "supertest": "^6.3.3"
-  }
+  },
+  "description": ""
 }
