@@ -19,6 +19,7 @@ router.post('/register', async (req, res) => {
 
         const salt = await bcryptjs.genSalt(10);
         const hash = await bcryptjs.hash(req.body.password, salt);
+        const email=req.body.email;
 
         const newUser = await collection.insertOne({
             email: req.body.email,
@@ -36,7 +37,7 @@ router.post('/register', async (req, res) => {
 
         const authtoken = jwt.sign(payload, JWT_SECRET);
         logger.info('User registered successfully');
-        res.json({ authtoken, email: req.body.email });
+        res.json({ authtoken, email });
 
     } catch (e) {
         logger.error('Registration error:', e);
