@@ -20,7 +20,9 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
+        working-directory: secondChance-backend
         run: npm install
 
       - name: Run ESLint
+        working-directory: secondChance-backend
         run: npm run lint
