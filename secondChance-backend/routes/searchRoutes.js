@@ -7,7 +7,7 @@ router.get('/', async (req, res, next) => {
     try {
         // Connect to MongoDB
         const db = await connectToDatabase();
-        const collection = db.collection("secondChanceItems");
+        const collection = db.collection(process.env.MONGO_COLLECTION);
 
         // Initialize the query object
         let query = {};
